@@ -117,16 +117,12 @@ El prototipo representa este flujo de confirmación para demostrar cómo se coor
 
 ## Prototipo
 
-El proyecto cuenta con un prototipo web navegable compuesto por diferentes páginas que representan el flujo principal de CineHub:
+El proyecto cuenta con un prototipo web navegable compuesto por las siguientes páginas:
 
-- `index.html` — página principal y exploración de películas.
+- `index.html` — página principal, búsqueda y exploración de películas, y formulario de registro.
 - `about.html` — información del proyecto y equipo.
-- `pelicula.html` — detalle de una película.
-- `funciones.html` — selección de función.
-- `crear-plan.html` — creación de un plan.
-- `plan.html` — visualización y respuesta al plan.
 
-Las páginas están conectadas mediante enlaces de navegación para representar el flujo de usuario de principio a fin.
+El flujo completo (detalle de película, selección de función, creación de plan y respuesta al plan) está representado en los wireframes de Figma; las páginas HTML correspondientes (`pelicula.html`, `funciones.html`, `crear-plan.html`, `plan.html`) son el siguiente paso de implementación del prototipo.
 
 ### Tecnologías utilizadas
 
@@ -155,7 +151,7 @@ El diseño utiliza CSS con Flexbox y CSS Grid, además de diseño responsive par
 
 El prototipo se encuentra publicado mediante GitHub Pages:
 
-**[Ver prototipo de CineHub](https://juanpablovanegas.github.io/cinehub/)**
+**[Ver prototipo de CineHub](https://dsaw-2026-2.github.io/m1-avance-projecto-final-cinehub/)**
 
 El objetivo del prototipo es permitir navegar entre las diferentes pantallas y demostrar el flujo principal de CineHub.
 
@@ -186,23 +182,24 @@ cinehub/
 │
 ├── index.html
 ├── about.html
-├── pelicula.html
-├── funciones.html
-├── crear-plan.html
-├── plan.html
 │
 ├── js/
 │   ├── main.js
 │   └── validation.js
 │
+├── styles.css
 ├── styles/
 │   ├── main.css
 │   └── responsive.css
 │
 ├── images/
 │
-├── README.md
-└── rubric.json
+└── README.md
+```
+
+> Próximas páginas (ya diseñadas en Figma, pendientes de implementar en HTML): `pelicula.html`, `funciones.html`, `crear-plan.html`, `plan.html`.
+
+## Restricciones del proyecto (verificadas)
 
 - [x] Resuelve un problema real e identificable para un usuario específico
 - [x] Justificado como app web (no hoja de cálculo, no herramienta existente, no solo-móvil)
