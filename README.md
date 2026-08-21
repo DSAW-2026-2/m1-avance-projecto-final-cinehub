@@ -1,48 +1,208 @@
 # CineHub
 
-Proyecto del curso DSAW · Universidad de La Sabana · Equipo: Samuel, Samuel David Ortiz Pico, David Fernando Gómez, Juan Pablo Vanegas
+Proyecto del curso DSAW · Universidad de La Sabana.
+
+**Equipo:** Samuel Díaz Melo, Samuel David Ortiz Pico, David Fernando Gómez y Juan Pablo Vanegas.
+
+---
 
 ## Problema
 
-En Colombia los amigos generalmente pierden demasiado tiempo cuadrando en WhatsApp, intentando ponerse de acuerdo sobre que hacer o en este caso que peliculas ver, en que cine y a que hora, con todo esto, la información de las peliculas y los horarios se pierden entre la información y los mensajes de chat, y no existe un lugar donde poder proponer un plan y ver quien realmente pudo confirmar asistencia, así que los planes se van deshaciendo lentamente, 
+En Colombia, los grupos de amigos suelen perder demasiado tiempo coordinando por WhatsApp qué hacer juntos y, específicamente, qué película ver, en qué cine y a qué hora.
+
+La información sobre películas, horarios y lugares termina mezclada entre mensajes del chat. Además, no existe un espacio centralizado donde una persona pueda proponer un plan y consultar fácilmente quién confirmó su asistencia.
+
+Como consecuencia, los planes pueden perderse entre las conversaciones o terminar cancelándose porque el grupo no logra ponerse de acuerdo.
+
+### Usuario identificado
+
+CineHub está dirigido principalmente a **estudiantes universitarios y grupos de amigos en Colombia** que quieren organizar una salida al cine y necesitan una forma sencilla de decidir qué película ver, seleccionar una función y confirmar quién asistirá.
+
+---
 
 ## Justificación de la aplicación web
 
-1. Un grupo de WhatsApp no puede estructurar los datos de una película (póster, calificación, horarios, cine) — es solo texto que se desplaza, y los planes viejos quedan enterrados bajo mensajes nuevos.
-2. Una hoja de cálculo no puede mostrar cartelera en tiempo real ni dejar que un amigo responda "Sí / Tal vez / No" a un plan — no tiene una vista interactiva y compartible.
-3. Apps existentes como Cine Colombia o Cinemark permiten comprar boletas, pero no ayudan a que el grupo se ponga de acuerdo sobre *qué* película ver y *quién* realmente va a ir.
-4. Una app solo-móvil dejaría afuera a quien esté en un computador coordinando el plan del grupo (por ejemplo, mientras trabaja o estudia); la web permite compartir un link que cualquiera abre sin instalar nada.
+CineHub se plantea como una aplicación web porque permite centralizar la información y compartir los planes mediante un enlace, sin exigir la instalación de una aplicación adicional.
+
+La solución está justificada frente a alternativas más simples por las siguientes razones:
+
+1. **WhatsApp no estructura la información de una película.**  
+   Un grupo de WhatsApp puede servir para conversar, pero la información sobre póster, calificación, género, cine y horarios queda dispersa entre los mensajes.
+
+2. **Una hoja de cálculo no ofrece una experiencia adecuada para este problema.**  
+   Puede almacenar información, pero no está diseñada para presentar una cartelera de películas y permitir una interacción sencilla para responder a un plan.
+
+3. **Las plataformas de cine tienen un objetivo diferente.**  
+   Servicios como Cine Colombia o Cinemark permiten consultar funciones y comprar boletas, pero no están enfocados en resolver el problema de coordinación de un grupo de amigos: decidir qué película ver y saber quién realmente asistirá.
+
+4. **Una aplicación web facilita el acceso desde diferentes dispositivos.**  
+   Un usuario puede abrir un enlace desde un computador, tablet o celular sin necesidad de instalar una aplicación.
+
+Por estas razones, una aplicación web permite combinar la exploración de películas con la creación y coordinación de planes entre amigos.
+
+---
 
 ## Usuarios objetivo
 
-Estudiantes universitarios y grupos de amigos en Colombia que quieren organizar una salida al cine juntos, pero les cuesta tomar una decisión y conseguir confirmaciones usando solo el chat.
+Los usuarios principales de CineHub son:
+
+- Estudiantes universitarios.
+- Grupos de amigos.
+- Personas que desean organizar una salida al cine.
+- Usuarios que necesitan comparar películas y horarios antes de tomar una decisión grupal.
+
+---
 
 ## Roles de usuario
 
-CineHub tiene dos roles con permisos distintos:
+CineHub contempla dos roles principales con permisos diferentes:
 
-- **Organizador del plan**: crea el plan (elige película, cine, fecha y hora), puede editarlo o cancelarlo, y ve quién ha respondido. Tiene permisos de escritura y eliminación sobre los planes que crea.
-- **Invitado**: solo puede ver los planes a los que fue invitado y responder Sí / Tal vez / No. No puede crear, editar ni cancelar planes de otros — solo tiene permiso de lectura sobre el plan y de escritura sobre su propia respuesta.
+### Organizador del plan
 
-## Funcionalidades principales (mínimo 3, de punta a punta)
+El organizador puede:
 
-1. **Buscar y explorar películas** — el usuario ve la cartelera con póster, calificación y género, y puede buscar por nombre.
-2. **Crear un plan** — el organizador elige película, cine, fecha y hora, y genera un plan con un link para compartir.
-3. **Responder a un plan (RSVP)** — el invitado abre el link del plan y responde Sí / Tal vez / No; el organizador ve en tiempo real quién confirmó.
+- Seleccionar una película.
+- Seleccionar el cine.
+- Seleccionar fecha y hora.
+- Crear un plan.
+- Compartir el plan con otros usuarios.
+- Consultar las respuestas de los invitados.
+- Editar o cancelar los planes que crea.
 
-## Prototipo estático
+### Invitado
 
-`index.html` y `about.html` — landing page y página de equipo, construidas con HTML semántico y CSS puro (Flexbox, Grid, responsive en 3 breakpoints), incluyendo un acordeón de preguntas frecuentes hecho solo con CSS (`:target`, sin JavaScript).
+El invitado puede:
 
-[Ver prototipo publicado en GitHub Pages](https://juanpablovanegas.github.io/cinehub/)
+- Consultar el plan al que fue invitado.
+- Ver la información de la película.
+- Consultar fecha, hora y lugar.
+- Responder **Sí / Tal vez / No**.
+- Consultar la información necesaria para decidir su asistencia.
+
+El invitado no puede crear, editar ni cancelar planes creados por otros usuarios.
+
+---
+
+## Funcionalidades principales
+
+El prototipo contempla un flujo completo compuesto por las siguientes funcionalidades:
+
+### 1. Buscar y explorar películas
+
+El usuario puede consultar la cartelera disponible, visualizar información de las películas y utilizar el buscador para encontrar una película específica.
+
+### 2. Consultar una película y sus funciones
+
+El usuario puede seleccionar una película y acceder a información relacionada con sus funciones, incluyendo cine, fecha y hora.
+
+### 3. Crear un plan
+
+El organizador puede seleccionar una película, función y datos del plan para generar una propuesta de salida con sus amigos.
+
+### 4. Consultar un plan
+
+El usuario puede acceder a la información del plan creado y consultar los datos principales de la salida.
+
+### 5. Responder a un plan
+
+Los invitados pueden indicar su disponibilidad mediante las opciones:
+
+- **Voy**
+- **Tal vez**
+- **No puedo**
+
+El prototipo representa este flujo de confirmación para demostrar cómo se coordinaría la asistencia de los integrantes del grupo.
+
+---
+
+## Prototipo
+
+El proyecto cuenta con un prototipo web navegable compuesto por diferentes páginas que representan el flujo principal de CineHub:
+
+- `index.html` — página principal y exploración de películas.
+- `about.html` — información del proyecto y equipo.
+- `pelicula.html` — detalle de una película.
+- `funciones.html` — selección de función.
+- `crear-plan.html` — creación de un plan.
+- `plan.html` — visualización y respuesta al plan.
+
+Las páginas están conectadas mediante enlaces de navegación para representar el flujo de usuario de principio a fin.
+
+### Tecnologías utilizadas
+
+- HTML5.
+- CSS3.
+- JavaScript.
+- Git y GitHub.
+- GitHub Pages.
+- Figma para el diseño de wireframes.
+
+El HTML utiliza elementos semánticos como:
+
+- `header`
+- `nav`
+- `main`
+- `section`
+- `article`
+- `footer`
+- `form`
+
+El diseño utiliza CSS con Flexbox y CSS Grid, además de diseño responsive para diferentes tamaños de pantalla.
+
+---
+
+## GitHub Pages
+
+El prototipo se encuentra publicado mediante GitHub Pages:
+
+**[Ver prototipo de CineHub](https://juanpablovanegas.github.io/cinehub/)**
+
+El objetivo del prototipo es permitir navegar entre las diferentes pantallas y demostrar el flujo principal de CineHub.
+
+---
 
 ## Figma
 
-Wireframes del equipo (5 pantallas: Inicio, Películas, Mis planes, Buscar, Acerca de): https://www.figma.com/design/GJN2lOeZOoOmQL95y17bI5/CINEHUB--copia-?node-id=2002-2
+Los wireframes del proyecto fueron desarrollados en Figma.
 
-> Completado: wireframes de todas las pantallas del proyecto para el Milestone 1.
+El diseño contempla las pantallas principales del proyecto:
 
-## Restricciones del proyecto (verificadas)
+1. Inicio.
+2. Películas.
+3. Mis planes.
+4. Buscar.
+5. Acerca de.
+
+**[Ver wireframes de CineHub en Figma](https://www.figma.com/design/GJN2lOeZOoOmQL95y17bI5/CINEHUB--copia-?node-id=2002-2)**
+
+Los wireframes mantienen una estructura visual consistente y sirven como base para el desarrollo del prototipo web.
+
+---
+
+## Estructura del proyecto
+
+```text
+cinehub/
+│
+├── index.html
+├── about.html
+├── pelicula.html
+├── funciones.html
+├── crear-plan.html
+├── plan.html
+│
+├── js/
+│   ├── main.js
+│   └── validation.js
+│
+├── styles/
+│   ├── main.css
+│   └── responsive.css
+│
+├── images/
+│
+├── README.md
+└── rubric.json
 
 - [x] Resuelve un problema real e identificable para un usuario específico
 - [x] Justificado como app web (no hoja de cálculo, no herramienta existente, no solo-móvil)
