@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showError(emailError, errors.email);
     showError(passwordError, errors.password);
 
-    return errors.name === "" && errors.email === "" && errors.password === "";
+    return Object.values(errors).every((message) => message === "");
   }
 
-  nameInput.addEventListener("input", runValidation);
-  emailInput.addEventListener("input", runValidation);
-  passwordInput.addEventListener("input", runValidation);
+  [nameInput, emailInput, passwordInput].forEach((input) => {
+    input.addEventListener("input", runValidation);
+  });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
       successMessage.textContent = "¡Cuenta creada correctamente!";
       successMessage.hidden = false;
       form.reset();
-      showError(nameError, "");
-      showError(emailError, "");
-      showError(passwordError, "");
+      [nameError, emailError, passwordError].forEach((errorElement) => {
+        showError(errorElement, "");
+      });
     } else {
       successMessage.hidden = true;
     }
