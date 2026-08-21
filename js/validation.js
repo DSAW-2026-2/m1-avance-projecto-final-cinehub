@@ -1,11 +1,9 @@
 export function validateName(name) {
-  const normalizedName = name.trim();
-
-  if (normalizedName === "") {
+  if (name.trim() === "") {
     return "El nombre es obligatorio.";
   }
 
-  if (normalizedName.length < 2) {
+  if (name.trim().length < 2) {
     return "El nombre debe tener al menos 2 caracteres.";
   }
 
@@ -13,15 +11,13 @@ export function validateName(name) {
 }
 
 export function validateEmail(email) {
-  const normalizedEmail = email.trim();
-
-  if (normalizedEmail === "") {
+  if (email.trim() === "") {
     return "El correo electrónico es obligatorio.";
   }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!emailPattern.test(normalizedEmail)) {
+  if (!emailPattern.test(email.trim())) {
     return "Ingresa un correo electrónico válido.";
   }
 
