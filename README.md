@@ -121,8 +121,12 @@ El proyecto cuenta con un prototipo web navegable compuesto por las siguientes p
 
 - `index.html` — página principal, búsqueda y exploración de películas, y formulario de registro.
 - `about.html` — información del proyecto y equipo.
+- `pelicula.html` — detalle de una película.
+- `funciones.html` — selección de función (cine, fecha y hora).
+- `crear-plan.html` — creación de un plan.
+- `plan.html` — visualización y respuesta al plan.
 
-El flujo completo (detalle de película, selección de función, creación de plan y respuesta al plan) está representado en los wireframes de Figma; las páginas HTML correspondientes (`pelicula.html`, `funciones.html`, `crear-plan.html`, `plan.html`) son el siguiente paso de implementación del prototipo.
+Las páginas están conectadas mediante enlaces de navegación para representar el flujo de usuario de principio a fin, siguiendo la misma estructura definida en los wireframes de Figma.
 
 ### Tecnologías utilizadas
 
@@ -182,6 +186,10 @@ cinehub/
 │
 ├── index.html
 ├── about.html
+├── pelicula.html
+├── funciones.html
+├── crear-plan.html
+├── plan.html
 │
 ├── js/
 │   ├── main.js
@@ -196,8 +204,6 @@ cinehub/
 │
 └── README.md
 ```
-
-> Próximas páginas (ya diseñadas en Figma, pendientes de implementar en HTML): `pelicula.html`, `funciones.html`, `crear-plan.html`, `plan.html`.
 
 ## Restricciones del proyecto (verificadas)
 
