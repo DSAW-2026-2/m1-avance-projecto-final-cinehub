@@ -622,11 +622,7 @@ main {
 
   #populares,
   #equipo,
-  .signup {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
+  .signup,
   .faq {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -678,7 +674,8 @@ main {
 
   #populares,
   #equipo,
-  .signup {
+  .signup,
+  .faq {
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -693,11 +690,6 @@ main {
 
   .movie-card img {
     height: 430px;
-  }
-
-  .faq {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
 }
